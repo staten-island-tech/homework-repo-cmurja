@@ -57,7 +57,7 @@ switch(new Date().getDay()) {
         day = 'Sunday';
         break;
     case 1:
-        day = 'Monday';
+        day = 'Monday';/* 
         break;
     case 2:
         day = 'Tuesday';
@@ -85,18 +85,18 @@ console.log(`Today is ${day}`);
 // functions//
 //Function declarations//
 
-function greet(firstName = `John`, lastName = `Doe`){
+/* function greet(firstName = `John`, lastName = `Doe`){
 /*     if(typeof firstName === `undefined`)(firstName=`John`)
     if(typeof lastName === `undefined`)(lastName=`Doe`)
     //console.log(`Hello`); */
-    return `Hello` + firstName + '' lastName;
+/*     return `Hello` + firstName + '' lastName;
 }
 //console.log(greet(`Steve`, `Smith`));
 
 //FUnction Expressions
 const square = function(x = 3){
     return x * x;
-};
+}; */
 
 //console.log(square(8);) // gives you 64 but if theres nothing inside yello () then gives u 9 bc 3 is default
 
@@ -113,7 +113,7 @@ const square = function(x = 3){
 }) (`Brad`); */
 
 // Functions inside objects PROPERTY METHODS
-const todo= {
+/* const todo= {
     add: function(){
         console.log(`Add todo...`)
     },
@@ -130,5 +130,32 @@ todo.delete = function(){
 todo.add();
 todo.edit(22);
 todo.delete();
+ */
+
+const inventors = [
+    { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+    { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+    { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+    { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+    { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+    { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+    { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+    { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+    { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+    { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+    { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+    { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+  ];
 
 
+    // Array.prototype.filter()
+    // 1. Filter the list of inventors for those who were born in the 1500's, use console.table to display the results
+
+    const prototype = age.filter( age =>)
+   
+ 
+
+
+    // Array.prototype.map()
+    // 2. Give us an array of the inventor first and last names
+    //console.table the results
