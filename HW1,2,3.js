@@ -137,7 +137,7 @@ todo.delete();
 
 // HW 4
 
-const inventors = [
+/* const inventors = [
     { first: 'Albert',  last: 'Einstein', year: 1879, passed: 1955 },
     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
     { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
@@ -150,23 +150,65 @@ const inventors = [
     { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
     { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
     { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-  ];
+  ]; */
 
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's, use console.table to display the results
 
-let limitBirth = inventors.filter(function (b) {
+/* let limitBirth = inventors.filter(function (b) {
     return b.year > 1500 && b.year < 1600;
 });
 console.table(limitBirth);
-
+ */
 
     // Array.prototype.map()
     // 2. Give us an array of the inventor first and last names
     //console.table the results
 
-let fullName = inventors.map (function (n) {
+/* let fullName = inventors.map (function (n) {
     return n.first  + n.last;
 }); 
-console.table(fullName);
+console.table(fullName); */
+
+
+// HW 5
+
+//Global SCope
+var a = 1;
+let b = 2;
+const c = 3;
+
+/* function test (){   // this wont change the variable already stated it just adds a new scope
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function Scope: ', a, b, c);
+}
+
+test(); */
+
+//Block Scope
+/* if(true){
+    var a = 4;      // this will get your global scope to change so var a will not equal 1, it will = 4
+    let b = 5;
+    const c = 6;
+    console.log('If Scope: ', a, b, c);
+} */
+
+
+//Loop   
+for(var a = 0; a < 10; a++){    // var a stayed 1 in global scope  when use let 
+    console.log(`Loop: ${a}`);
+}
+
+// if instead of let you put var, the value of a in global scope would be 10
+
+
+
+
+
+
+
+
+console.log('Global Scope: ', a, b, c);
