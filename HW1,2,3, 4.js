@@ -278,10 +278,14 @@ const list = Array.from(document.querySelectorAll('li'));
 
       //console.log(parts);
 
-      return Number(parts[0]*60) + Number(parts[1]);
+      return (parseIntr(code[0]*60)) + parsInt(code[1]);
+
+      
 
     })    // map to an array of seconds, 
 
-
+.reduce((acc, val)) => {
+          return acc+val;
+      }
 
     console.log(listTimeSeconds);
