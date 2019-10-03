@@ -234,36 +234,54 @@ console.log(val);  */
 
 //HW 6
 
-const listOfItems = document.querySelectorAll('li');
-    const listOfItemsArray = Array.prototype.slice.call(listOfItems);
-    console.log(listOfItemsArray);  //// Select all the list items on the page and convert to array (array from)
+const list = Array.from(document.querySelectorAll('li'));
+
+    console.log(list);  //// Select all the list items on the page and convert to array (array from)
+
     
+
   
 
-    const listOfItemsFlexbox = listOfItemsArray.filter(item => {
-      item = item.textContent;
-      return item.includes('Flexbox') == true;
+
+
+    const listFlexbox = list.filter(item => item.textContent == "Flexbox Video");
+
+
+
+    console.log(listFlexbox);   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
+
+
+
+  
+
+
+
+    const listTime = listFiltered.map(obj => {
+
+      return obj.dataset.time;
+
     });
 
-    console.log(listOfItemsFlexbox);   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
+
+
+    console.log(listTime); // map down to a list of time strings Hint look up dataset mdn and think 'time'... you will need to create a new variable called filtered 
 
   
 
-    const listOfItemsTimeStamp = listOfItemsArray.map(item => {
-      const timeStamp = item.dataset.time;
-      return timeStamp;
-    });
+  
 
-    console.log(listOfItemsTimeStamp); // map down to a list of time strings Hint look up dataset mdn and think 'time'... you will need to create a new variable called filtered 
-  
-  
     
-    const listOfItemsTimeStampSeconds = listOfItemsTimeStamp.map(timeCode => {
+
+    const listTimeSeconds = listTime.map(timeCode => {
+
       const parts = timeCode.split(':');
+
       //console.log(parts);
+
       return Number(parts[0]*60) + Number(parts[1]);
+
     })    // map to an array of seconds, 
 
-    console.log(listOfItemsTimeStampSeconds);   
 
-  
+
+    console.log(listTimeSeconds);
