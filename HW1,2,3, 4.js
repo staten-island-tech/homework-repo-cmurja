@@ -245,7 +245,7 @@ const listOfItems = document.querySelectorAll('li');
       return item.includes('Flexbox') == true;
     });
 
-    console.log(itemsListFlexbox);   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
+    console.log(listOfItemsFlexbox);   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
 
   
 
