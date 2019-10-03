@@ -284,8 +284,8 @@ const list = Array.from(document.querySelectorAll('li'));
 
     })    // map to an array of seconds, 
 
-.reduce((acc, val)) => {
+.reduce((acc, val) => {
           return acc+val;
-      }
+      })
 
     console.log(listTimeSeconds);
