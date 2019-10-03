@@ -135,7 +135,7 @@ todo.delete();
 
 
 
-// HW 4
+// 
 
 /* const inventors = [
     { first: 'Albert',  last: 'Einstein', year: 1879, passed: 1955 },
@@ -175,9 +175,9 @@ console.table(fullName); */
 // HW 5
 
 //Global SCope
-var a = 1;
-let b = 2;
-const c = 3;
+//var a = 1;
+//let b = 2;
+//const c = 3;
 
 /* function test (){   // this wont change the variable already stated it just adds a new scope
     var a = 4;
@@ -198,17 +198,46 @@ test(); */
 
 
 //Loop   
-for(var a = 0; a < 10; a++){    // var a stayed 1 in global scope  when use let 
-    console.log(`Loop: ${a}`);
-}
+//for(var a = 0; a < 10; a++){    // var a stayed 1 in global scope  when use let 
+    //console.log(`Loop: ${a}`);
+
 
 // if instead of let you put var, the value of a in global scope would be 10
 
+//console.log('Global Scope: ', a, b, c);
 
+//HW 6
 
+const listOfItems = document.querySelectorAll('li');
+    const listOfItemsArray = Array.prototype.slice.call(listOfItems);
+    console.log(listOfItemsArray);  //// Select all the list items on the page and convert to array (array from)
+    
+  
 
+    const listOfItemsFlexbox = listOfItemsArray.filter(item => {
+      item = item.textContent;
+      return item.includes('Flexbox') == true;
+    });
 
+    console.log(itemsListFlexbox);   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
 
+  
 
+    const listOfItemsTimeStamp = listOfItemsArray.map(item => {
+      const timeStamp = item.dataset.time;
+      return timeStamp;
+    });
 
-console.log('Global Scope: ', a, b, c);
+    console.log(listOfItemsTimeStamp); // map down to a list of time strings Hint look up dataset mdn and think 'time'... you will need to create a new variable called filtered 
+  
+  
+    
+    const listOfItemsTimeStampSeconds = listOfItemsTimeStamp.map(timeCode => {
+      const parts = timeCode.split(':');
+      //console.log(parts);
+      return Number(parts[0]*60) + Number(parts[1]);
+    })    // map to an array of seconds, 
+
+    console.log(listOfItemsTimeStampSeconds);   
+
+  
