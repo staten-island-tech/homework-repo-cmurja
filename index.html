@@ -12,7 +12,7 @@
 </body>
 </html> 
  -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,8 +43,8 @@
   <li data-time="3:31">Flexbox Video</li>
 </ul>
 
-<script src="app.js">
-  // Q1.READ ALL THE INSTRUCTIONS CAREFULLY
+<script src="app.js"> -->
+  <!-- // Q1.READ ALL THE INSTRUCTIONS CAREFULLY
   // Select all the list items on the page and convert to array (array from)
 
   // Filter for only the elements that contain the word 'Flexbox' hint use textContent (filter method)
@@ -75,6 +75,48 @@
   //Q2
   //Given this array: `[3,62,234,7,23,74,23,76,92]`, use the array filter method and an arrow function to create an array of the numbers greater than `70`
   //const numbers = [3, 62, 234, 7, 23, 74, 23, 76, 92]
+/</script>
+</body>
+</html> */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The ...Spread Operator</title>
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: sans-serif;
+      background: #ffc600;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      color:white;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    }
+    .jump span {
+      display: inline-block;
+      transition: transform 0.2s;
+      cursor:url('http://csscursor.info/source/santahand.png'), default;
+    }
+    .jump span:hover {
+      transform: translateY(-20px) rotate(10deg) scale(2);
+    }
+    
+  </style>
+</head>
+<body>
+  <h2 class="jump">SPREADS!</h2>
+
+<script src='app.js'> 
+    const heading = document.querySelector('.jump'); 
+    sparanWrap(heading.textContent); 
+    function sparanWrap(word) {
+        return [...word].map(letter => <span>${letter}</span>).join(''); //took every item and spread it 
+    }
 </script>
 </body>
 </html>

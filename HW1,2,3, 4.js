@@ -234,7 +234,7 @@ console.log(val);  */
 
 //HW 6
 
-const list = Array.from(document.querySelectorAll('li'));
+/* const list = Array.from(document.querySelectorAll('li'));
 
     console.log(list);  //// Select all the list items on the page and convert to array (array from)
 
@@ -288,4 +288,19 @@ const list = Array.from(document.querySelectorAll('li'));
           return acc+val;
       })
 
-    console.log(listTimeSeconds);
+    console.log(listTimeSeconds); */
+    //Hw 7
+   /*  const featured = ['deep', 'pepper', 'hawaiian'];
+const specialty = ['meaty', 'spicy', 'marge'];
+
+const pizzas = [...featured, 'veg', ...specialty];
+const fridayPizzas = [...pizzas];
+//console.log(pizzas); */
+/* const heading = document.querySelector('.jump');
+heading.innerHTML = sparanWrap(heading.textContent);
+
+
+function sparanWrap(word) {
+    return [...word].map(letter => `<span>${letter}</span>`).join('');
+} */
+
