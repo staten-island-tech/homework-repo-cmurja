@@ -304,3 +304,27 @@ function sparanWrap(word) {
     return [...word].map(letter => `<span>${letter}</span>`).join('');
 } */
 
+class Album {
+    constructor(title, artist, yearReleased){
+
+    
+    this.title= title;
+    this.artist= artist;
+
+    this.yearReleased = yearReleased;
+}
+calculateAge: (){
+    return (new Date().getFullYear() - this.yearReleased); 
+}
+
+}
+const abbeyRoad = new Album('Abbey Road', 'The Beatles', 1969) // instantiate new album
+
+class CD extends Album {
+    constructor(title, artist, yearReleased){
+        super(title,artist,yearReleased);
+        this.digital = digital;
+    }
+}
+
+
