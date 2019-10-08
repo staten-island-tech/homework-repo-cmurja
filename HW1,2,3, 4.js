@@ -287,7 +287,7 @@ console.log(val);  */
 .reduce((acc, val) => {
           return acc+val;
       })
-
+/* 
     console.log(listTimeSeconds); */
     //Hw 7
    /*  const featured = ['deep', 'pepper', 'hawaiian'];
@@ -301,10 +301,10 @@ heading.innerHTML = sparanWrap(heading.textContent);
 
 
 function sparanWrap(word) {
-    return [...word].map(letter => `<span>${letter}</span>`).join('');
+/*     return [...word].map(letter => `<span>${letter}</span>`).join('');
 } */
 
-class Album {
+/* class Album {
     constructor(title, artist, yearReleased){
 
     
@@ -312,8 +312,8 @@ class Album {
     this.artist= artist;
 
     this.yearReleased = yearReleased;
-}
-calculateAge: (){
+} */
+/* calculateAge: (){
     return (new Date().getFullYear() - this.yearReleased); 
 }
 
@@ -322,9 +322,70 @@ const abbeyRoad = new Album('Abbey Road', 'The Beatles', 1969) // instantiate ne
 
 class CD extends Album {
     constructor(title, artist, yearReleased){
+
         super(title,artist,yearReleased);
         this.digital = digital;
     }
+} */
+ 
+
+/* class Movie {
+    constructor(title, princess, yearReleased){
+
+    
+    this.title= title;
+    this.artist= princess;
+
+    this.yearReleased = yearReleased;
+}
+calculateAge: (){
+    return (new Date().getFullYear() - this.yearReleased); 
 }
 
+}
+ */ 
 
+ /* class Person {
+     constructor (age, fullName){
+         this.age = age;
+         this.fullName= fullName;
+     }
+     calculateBirthYeaR:(){
+        return (new Date().getFullYear() - this.age); 
+     }
+        
+ }
+ const Winny= new Person (17, 'Winny');
+ console.log(winny.calculateBirthYeaR());
+ 
+  */
+ class Movie {
+    constructor(title, princess, yearReleased){
+
+    
+    this.title= title;
+    this.artist= princess;
+
+    this.yearReleased = yearReleased;
+}
+calculateAge (){
+    return (new Date().getFullYear() - this.yearReleased); 
+}
+ }
+
+ //view class for the UI which contains methods
+//clearfield method 
+//remove smth
+//creates the html for UI DISPLAY +++new html thing and insert it 
+
+
+
+ //controller combines ui and model // so theres an event 
+ // get values  querey thing
+ // pass the values into the class its called instantiate //instantiate new class/object with variable name 
+
+ // instantiate a new UI const ui= new UI()
+
+ // call relevant methods
+
+ //seperate event handler for removing 
