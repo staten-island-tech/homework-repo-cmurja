@@ -359,7 +359,7 @@ calculateAge: (){
  console.log(winny.calculateBirthYeaR());
  
   */
- class Movie {
+/*  class Movie {
     constructor(title, princess, yearReleased){
 
     
@@ -371,7 +371,7 @@ calculateAge: (){
 calculateAge (){
     return (new Date().getFullYear() - this.yearReleased); 
 }
- }
+ } */
 
  //view class for the UI which contains methods
 //clearfield method 
@@ -389,3 +389,82 @@ calculateAge (){
  // call relevant methods
 
  //seperate event handler for removing 
+
+/* 
+ <script>
+ const comments = [
+ { text: 'Love this!', id: 523423 },
+ { text: 'Super good', id: 823423 },
+ { text: 'You are the best', id: 2039842 },
+ { text: 'Ramen is my fav food ever', id: 123523 },
+ { text: 'Nice Nice Nice!', id: 542328 }
+];
+{/* 
+ Array.prototype.find()
+ // Find is like filter, but instead returns just the one you are looking for
+ // find the comment with the ID of 82342*/
+   
+   
+/*     
+    let textFilter= comments.find(function(e){
+        return e.id === 823423;
+
+    });
+    console.log(textid);
+
+
+
+</script> */ 
+
+class Movie {
+    constructor(title, princess, yearReleased){
+
+    
+    this.title= title;
+    this.artist= princess;
+
+    this.yearReleased = yearReleased;
+}
+
+calculateAge (){
+    return (new Date().getFullYear() - this.yearReleased); 
+}
+}
+
+const form = document.querySelector('#movie-form'); //could also getElementById
+const userAlias = document.querySelector('#title');
+const userPowers = document.querySelector('#princess');
+const userFullName = document.querySelector('#full-name');
+const userFirstAppearance = document.querySelector('#first-appearance');
+const userImage = document.querySelector('#image');
+const display = document.querySelector('.display');
+
+function eventListeners(){
+    form.addEventListener('submit', displayAvengerMember);
+    display.addEventListener('click', removeAvenger);
+    /* form.addEventListener('submit', function(){
+       console.log('test');
+   });  */
+}
+eventListeners();
+
+function displayDisney(e) {
+    let html = '<div class="display-disney"><div class="display-title">%title%</div><div class="display-princess">%powers%</div><div class="display-name">%name%</div><div class="first-appearance">%years%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger">Remove Avenger &#10006; </p></div></div>';
+
+    let newHtml = html.replace('%alias%', userAlias.value);
+    newHtml = newHtml.replace('%powers%', userPowers.value);
+    newHtml = newHtml.replace('%name%', userFullName.value);
+    newHtml = newHtml.replace('%years%', userFirstAppearance.value);
+    newHtml = newHtml.replace('%url%', userImage.value);
+    display.insertAdjacentHTML('beforeend', newHtml);
+    //console.log('is the vebnt firing?');
+    e.preventDefault();
+
+}
+
+function removeAvenger(e) {
+    if(e.target.parentElement.classList.contains('remove-avenger')){
+        //e.target.parentElement.parentElement.remove();
+        console.log(e.target.parentElement);
+    }
+}
