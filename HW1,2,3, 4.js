@@ -422,7 +422,6 @@ class Movie {
     
     this.title= title;
     this.artist= princess;
-
     this.yearReleased = yearReleased;
 }
 
@@ -431,13 +430,30 @@ calculateAge (){
 }
 }
 
-const form = document.querySelector('#movie-form'); //could also getElementById
-const userAlias = document.querySelector('#title');
-const userPowers = document.querySelector('#princess');
-const userFullName = document.querySelector('#full-name');
-const userFirstAppearance = document.querySelector('#first-appearance');
-const userImage = document.querySelector('#image');
-const display = document.querySelector('.display');
+
+
+class UI {
+    +
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function eventListeners(){
     form.addEventListener('submit', displayAvengerMember);
@@ -449,7 +465,14 @@ function eventListeners(){
 eventListeners();
 
 function displayDisney(e) {
-    let html = '<div class="display-disney"><div class="display-title">%title%</div><div class="display-princess">%powers%</div><div class="display-name">%name%</div><div class="first-appearance">%years%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger">Remove Avenger &#10006; </p></div></div>';
+
+const form = document.querySelector('#movie-form'); 
+const userAlias = document.querySelector('#title');
+const userPowers = document.querySelector('#princess');
+const useryearReleased = document.querySelector('#yearReleased'); 
+const display = document.querySelector('.display'); 
+   
+let html = '<div class="display-disney"><div class="display-title">%title%</div><div class="display-princess">%powers%</div><div class="display-name">%name%</div><div class="first-appearance">%years%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger">Remove Avenger &#10006; </p></div></div>';
 
     let newHtml = html.replace('%alias%', userAlias.value);
     newHtml = newHtml.replace('%powers%', userPowers.value);
@@ -468,3 +491,14 @@ function removeAvenger(e) {
         console.log(e.target.parentElement);
     }
 }
+
+
+doc .get elemtbyid
+
+<ins>const new alnum = new Album(title,princes</ins>
+
+const ui = new UI();
+
+ui.addAlbumToList(album);
+ui.clearFields();
+e.preventDefault();
