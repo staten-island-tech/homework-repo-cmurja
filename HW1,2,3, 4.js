@@ -433,7 +433,23 @@ calculateAge (){
 
 
 class UI {
-    +
+    addMovie(e) {
+        if (userTitle.value || userPrincess|| useryearReleased === ''){
+            alert ('Error: MIssing Info')
+        } else {
+
+                let html = 
+                let newHtml = html.replace ('')
+
+
+
+
+
+
+
+
+        }
+    }
 }
 
 
@@ -456,8 +472,8 @@ class UI {
 
 
 function eventListeners(){
-    form.addEventListener('submit', displayAvengerMember);
-    display.addEventListener('click', removeAvenger);
+    form.addEventListener('submit', displayMovie);
+    display.addEventListener('click', removeMovie);
     /* form.addEventListener('submit', function(){
        console.log('test');
    });  */
@@ -474,7 +490,7 @@ const display = document.querySelector('.display');
    
 let html = '<div class="display-disney"><div class="display-title">%title%</div><div class="display-princess">%powers%</div><div class="display-name">%name%</div><div class="first-appearance">%years%</div><div class="display-image"><img src="%url%" alt=""></div><div class="remove-avenger"><p class="remove-avenger">Remove Avenger &#10006; </p></div></div>';
 
-    let newHtml = html.replace('%alias%', userAlias.value);
+    let newHtml = html.replace('%title%', userTitle.value);
     newHtml = newHtml.replace('%powers%', userPowers.value);
     newHtml = newHtml.replace('%name%', userFullName.value);
     newHtml = newHtml.replace('%years%', userFirstAppearance.value);
