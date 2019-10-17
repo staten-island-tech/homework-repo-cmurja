@@ -416,6 +416,84 @@ calculateAge (){
 
 </script> */ 
 
+
+//Hw 8
+/* const alphabet = ['A', 'B', 'C', 'D', 'E', 'F']
+const numbers = ['1', '2', '3', '4', '5', '6']
+
+const newArray =[ ...alphabet, ...numbers]
+
+const [a, b] = alphabet   // const [a,, c, ...rest] = alphabet  skip 2nd element
+console.log(a)
+console.log(b)
+//console.log(rest)
+//console.log(newArray)
+
+function sumAndMultiply (a,b) {
+    return [a+b, a*b, a/b]
+    }
+  
+  const [sum, multiple, division = 'No division'] = sumAndMultiply(2,3)
+  console.log(sum)
+  console.log(multiple)
+  console.log(division)
+
+//Object Destructuring 
+  const personOne = {
+    name: 'Kyle',
+    age: 24,
+    favoriteFood: 'Watermelon', //added in
+    address: {
+        city: 'Somewhere', 
+        state: 'One of them'
+    }
+}
+
+const personTwo = {
+    name: 'Sally',
+    age: 32,
+    address: {
+        city: 'Somewhere else',
+        state: 'Another one of them'
+    }
+}
+  
+const { name, age } = personTwo 
+
+console.log(name) //Sally
+console.log(age) //32
+
+const { name: firstName, age, favoriteFood = 'Rice', ...rest} = personTwo 
+
+console.log(firstName) //Still get Sally
+console.log(age)
+console.log(favoriteFood) //Rice until favoriteFood variable added 
+console.log(rest) 
+
+const { name: firstName, address: { city } } = personTwo 
+
+function printUser(user) {
+    console.log(`Name is: ${user.name}.  Age is ${user.age}`)
+}
+
+
+//MOST IMPORTANT!!!
+function printUser({ name, age, favoriteFood = 'Watermelon' }) {
+    console.log(`Name is: ${name}.  Age is ${age}.  Food is ${favoriteFood}`)
+}
+
+printUser(personOne)
+ */
+
+
+
+
+
+
+
+
+
+
 class Movie {
     constructor(title, princess, yearReleased){
 
