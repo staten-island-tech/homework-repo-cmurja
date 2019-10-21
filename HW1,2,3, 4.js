@@ -492,7 +492,7 @@ printUser(personOne)
 
 
 
-
+/* 
 
 class Movie {
     constructor(title, princess, yearReleased){
@@ -517,7 +517,7 @@ class UI {
         } else {
 
                 let html = 
-                let newHtml = html.replace ('')
+                let newHtml = html.replace ('') */
 
 
 
@@ -526,36 +526,16 @@ class UI {
 
 
 
-        }
-    }
-}
+        
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function eventListeners(){
+/* function eventListeners(){
     form.addEventListener('submit', displayMovie);
     display.addEventListener('click', removeMovie);
     /* form.addEventListener('submit', function(){
        console.log('test');
    });  */
-}
+/* }
 eventListeners();
 
 function displayDisney(e) {
@@ -573,16 +553,16 @@ let html = '<div class="display-disney"><div class="display-title">%title%</div>
     newHtml = newHtml.replace('%name%', userFullName.value);
     newHtml = newHtml.replace('%years%', userFirstAppearance.value);
     newHtml = newHtml.replace('%url%', userImage.value);
-    display.insertAdjacentHTML('beforeend', newHtml);
+    display.insertAdjacentHTML('beforeend', newHtml); */
     //console.log('is the vebnt firing?');
-    e.preventDefault();
+ /*    e.preventDefault();
 
 }
 
 function removeAvenger(e) {
-    if(e.target.parentElement.classList.contains('remove-avenger')){
+    if(e.target.parentElement.classList.contains('remove-avenger')){ */
         //e.target.parentElement.parentElement.remove();
-        console.log(e.target.parentElement);
+ /*        console.log(e.target.parentElement);
     }
 }
 
@@ -595,4 +575,43 @@ const ui = new UI();
 
 ui.addAlbumToList(album);
 ui.clearFields();
-e.preventDefault();
+e.preventDefault(); */ 
+
+// /* const second = () => {
+//     setTimeout(() => {
+//         console.log('Async Hey there');
+//     },2000);
+    
+// }
+// const first = () => {
+//     console.log('hey there');
+//     second();
+//     console.log('The ends');
+// }
+
+// first (); */
+/* 
+
+function getPkmn(){
+    fetch ('https://pokeapi.co/api/v2/pokemon/ditto/')
+    .then(result=> {
+        return result.json()
+    }).then(data => console.log(data.sprites));
+   
+}
+getPkmn();
+ */
+
+ async function getPkmn(){
+    await fetch ('https://pokeapi.co/api/v2/pokemon/ditto/');
+    try {
+            const result = await fetch('https://pokeapi.co/api/v2/pokemon/ditto/')
+            const data = await result.json;
+            console.log(data);
+
+    }catch (err){
+        console.log(err);
+    }
+
+} 
+getPkmn();
