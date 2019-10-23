@@ -602,7 +602,8 @@ function getPkmn(){
 getPkmn();
  */
 
- async function getPkmn(){
+ // class notes
+/*  async function getPkmn(){
     await fetch ('https://pokeapi.co/api/v2/pokemon/ditto/');
     try {
             const result = await fetch('https://pokeapi.co/api/v2/pokemon/ditto/')
@@ -614,4 +615,38 @@ getPkmn();
     }
 
 } 
-getPkmn();
+getPkmn(); */
+
+async function go() {
+    const p1 = fetch(''); 
+    const p2 = fetch ('').then(r => r.json()); //await waits for the one previous 
+    const res = Promise.all;;(p1, p2); 
+    console.log(res); 
+    const dataPromises = res.map(r => r.json()); 
+}
+
+go(); 
+
+async function getData() {
+
+}
+
+getData['wesbo', 'stolinski']; 
+
+// async function go() {
+        //     const p1 = fetch('https://api.github.com/users/wesbos')
+        //     const p2 = fetch('https://api.github.com/users/stolinski')
+        //     // Wait for btoh of them to come back
+        //     const res = await  Promise.all([p1,p2]);
+        //     const dataPromise = res.map(r => r.json());
+        //     const wesAndScott = await Promise.all(dataPromises);
+        //     console.log(wesAndScott);
+        // }
+        // go();
+        
+        async function getData(names) {
+            const promises = names.map(name => fetch(`https://github.com/users/${name}`).then(r => r.json()));
+            const [wes, scott] = await Promise.all(promises);
+            console.log(people);
+        }
+        getData(['wesbos','stolinski','darcyclarke']);
